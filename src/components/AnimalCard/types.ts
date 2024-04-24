@@ -1,9 +1,17 @@
-export type AnimalDataProps = {
+// Типизация объекта через type
+// type Animal = {
+//   name: string,
+//   species: string,
+//   image: string
+// }
+
+// Типизация объекта через interface
+interface Animal {
   name: string;
   species: string;
   image: string;
-};
+}
 
-export type AnimalCardProps = {
-  animalData: AnimalDataProps;
-};
+export interface AnimalCardProps {
+  animalData: Animal;
+}

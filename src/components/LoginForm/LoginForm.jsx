@@ -20,7 +20,7 @@ function LoginForm() {
           label="Password"
         />
       </div>
-      {/* <Button type="submit" name="Login" /> */}
+      <Button type="submit" name="Login" />
     </div>
   );
 }

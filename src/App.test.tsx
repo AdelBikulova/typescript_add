@@ -1,9 +1,20 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import "./App.css";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// Lessons
+// import Lesson06 from "./lessons/Lessons06/Lessons06";
+import Lesson07 from "lessons/Lesson07/Lesson";
+
+// Homeworks
+
+// Consultations
+
+function App() {
+  return (
+    <div className="App">
+      {/* <Lesson06 /> */}
+      <Lesson07 />
+    </div>
+  );
+}
+
+export default App;
