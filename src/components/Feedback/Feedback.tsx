@@ -1,6 +1,7 @@
+import { useState } from "react";
+
 import "./styles.css";
 import Button from "../Button/Button";
-import { useState } from "react";
 
 function Feedback() {
   const [like, setLike] = useState<number>(0);

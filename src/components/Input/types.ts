@@ -1,6 +1,7 @@
-export type InputProps = {
-  name: string;
-  type?: string;
-  placeholder?: string;
-  label?: string;
-};
+export interface InputProps {
+  name: string,
+  type?: string,
+  placeholder: string,
+  label: string,
+  onInputChange?: () => void
+}
