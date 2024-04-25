@@ -5,7 +5,7 @@ import './App.css';
 
 
 // Homeworks
-import Homework07 from 'homeworks/Homework07/Homework07';
+import Homework07 from './homeworks/Homework07/Homework07';
 // Consultations
 
 

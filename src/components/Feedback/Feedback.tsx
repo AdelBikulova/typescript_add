@@ -1,6 +1,6 @@
 import { FeedbackProps } from "./types";
 import "./styles.css";
-import Button from "../Button/Button";
+import Button from "components/Button/Button";
 
 function Feedback({
   like,
