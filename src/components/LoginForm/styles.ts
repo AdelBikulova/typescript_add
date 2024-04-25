@@ -1,4 +1,7 @@
-.loginform-wrapper {
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+
+export const loginFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -8,15 +11,15 @@
   border: 1px solid black;
   border-radius: 4px;
   background-color: white;
-}
+`;
 
-.loginform-name {
+export const loginFormName = css`
   font-size: 24px;
-}
+`;
 
-.inputs-container {
+export const inputsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
-}
+`;
