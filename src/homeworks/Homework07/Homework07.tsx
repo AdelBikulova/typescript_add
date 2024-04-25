@@ -1,4 +1,3 @@
-import "./styles.css";
 import { useState } from "react";
 import Feedback from "components/Feedback/Feedback";
 
