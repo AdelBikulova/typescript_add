@@ -1,5 +1,9 @@
-import "./styles.css";
-import { InputProps } from "./types";
+import {
+  InputProps,
+  InputComponentContainer,
+  InputComponentLabel,
+  InputComponent,
+} from "./styles";
 
 function Input({
   name,
@@ -7,18 +11,29 @@ function Input({
   placeholder,
   label,
   onInputChange,
+  width,
+  height,
+  padding,
+  fontSize,
+  color,
+  backgroundColor,
+  borderRadius,
 }: InputProps) {
   return (
-    <div className="input-component-container">
-      <label className="input-component-label">{label}</label>
-      <input
-        className="input-component"
+    <InputComponentContainer width={width} height={height}>
+      <InputComponentLabel fontSize={fontSize} color={color}>
+        {label}
+      </InputComponentLabel>
+      <InputComponent
         name={name}
         type={type}
         placeholder={placeholder}
         onChange={onInputChange}
+        padding={padding}
+        backgroundColor={backgroundColor}
+        borderRadius={borderRadius}
       />
-    </div>
+    </InputComponentContainer>
   );
 }
 
