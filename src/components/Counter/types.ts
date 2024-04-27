@@ -3,4 +3,3 @@ export interface CounterProps {
   onMinusClick: () => void;
   onPlusClick: () => void;
 }
-
