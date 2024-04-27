@@ -1,14 +1,6 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-export interface User {
-  avatar: string;
-  userName: string;
-  profession: string;
-  hobbies: string[];
-}
-
-export const mainStyles = css`
+export const ProfileCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,15 +13,15 @@ export const mainStyles = css`
   font-size: 20px;
 `;
 
-export const ProfileCardWrapper = styled.div`
-  ${mainStyles}
+export const ProfileCardImg = styled.img`
+  width: 100px;
 `;
-
 export const PropertyName = styled.span`
   font-weight: bold;
   font-size: 24px;
 `;
 
-export const UserName = styled.h3`
+export const ProfileCardTitle = styled.h3`
   font-size: 28px;
 `;
+export const PropertyContainer = styled.p``;

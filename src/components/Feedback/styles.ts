@@ -1,20 +1,4 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-
-export interface FeedbackProps {
-  like: number;
-  dislike: number;
-  addLike: () => void;
-  addDislike: () => void;
-  resetResults: () => void;
-}
-
-const commonStyles = css`
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  width: 100%;
-`;
 
 export const FeedbackContainer = styled.div`
   display: flex;
@@ -26,19 +10,20 @@ export const FeedbackContainer = styled.div`
 `;
 
 export const FeedbackResultContainer = styled.div`
-  ${commonStyles}
+  display: flex;
+  gap: 30px;
+  width: 100%;
 `;
 
 export const LikeDislikeContainer = styled.div`
-  ${commonStyles}
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
 `;
 
 export const Result = styled.div`
   font-size: 34px;
   color: rgb(19, 29, 66);
   font-weight: bold;
-`;
-
-export const ButtonControl = styled.div`
-  width: 100px;
 `;

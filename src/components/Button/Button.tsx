@@ -1,33 +1,16 @@
-import { ButtonProps, StyledButton } from "./styles";
+import { ButtonComponent } from "./styles";
+import { ButtonProps } from "./types";
 
 function Button({
   name,
   type = "button",
   onButtonClick,
-  width,
-  height,
-  borderRadius,
-  padding,
-  backgroundColor,
-  color,
-  fontSize,
   disabled = false,
 }: ButtonProps) {
   return (
-    <StyledButton
-      type={type}
-      onClick={onButtonClick}
-      width={width}
-      height={height}
-      borderRadius={borderRadius}
-      padding={padding}
-      backgroundColor={backgroundColor}
-      color={color}
-      fontSize={fontSize}
-      disabled={disabled}
-    >
+    <ButtonComponent disabled={disabled} type={type} onClick={onButtonClick}>
       {name}
-    </StyledButton>
+    </ButtonComponent>
   );
 }
 

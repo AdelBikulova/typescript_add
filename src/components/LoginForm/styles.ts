@@ -1,7 +1,6 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-export const loginFormWrapper = styled.div`
+export const LoginFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -13,11 +12,11 @@ export const loginFormWrapper = styled.div`
   background-color: white;
 `;
 
-export const loginFormName = css`
+export const LoginFormName = styled.p`
   font-size: 24px;
 `;
 
-export const inputsContainer = styled.div`
+export const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;

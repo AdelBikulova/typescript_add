@@ -1,10 +1,14 @@
-import { TextAreaContainer, StyledTextArea, TextAreaProps } from "./styles";
+import { TextAreaContainer, TextAreaLabel, TextAreaComponent } from "./styles";
+import { TextAreaProps } from "./types";
 
 function TextArea({ placeholder, name, label }: TextAreaProps) {
   return (
     <TextAreaContainer>
-      <label>{label}</label>
-      <StyledTextArea placeholder={placeholder} name={name} />
+      <TextAreaLabel>{label}</TextAreaLabel>
+      <TextAreaComponent
+        placeholder={placeholder}
+        name={name}
+      ></TextAreaComponent>
     </TextAreaContainer>
   );
 }

@@ -1,25 +1,16 @@
-import { AnimalCardWrapper, AnimalImage, AnimalCardProps } from "./styles";
+import {
+  AnimalCardWrapper,
+  AnimalImage,
+  CardParagraph,
+  CardTitle,
+} from "./styles";
+import { AnimalCardProps } from "./types";
 
-function AnimalCard({
-  animalData,
-  backgroundColor,
-  borderRadius,
-  width,
-  height,
-  padding,
-}: AnimalCardProps) {
-  const styleObject = {
-    backgroundColor: backgroundColor || "rgb(217, 180, 224)",
-    borderRadius: borderRadius || "4px",
-    width: width || "300px",
-    height: height || "300px",
-    padding: padding || "20px",
-  };
-
+function AnimalCard({ animalData }: AnimalCardProps) {
   return (
-    <AnimalCardWrapper style={styleObject}>
-      <h2>{animalData.name}</h2>
-      <p>{animalData.species}</p>
+    <AnimalCardWrapper>
+      <CardTitle>{animalData.name}</CardTitle>
+      <CardParagraph>{animalData.species}</CardParagraph>
       <AnimalImage src={animalData.image} />
     </AnimalCardWrapper>
   );
