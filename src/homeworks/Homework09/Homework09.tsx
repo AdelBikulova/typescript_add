@@ -4,8 +4,7 @@ import { Homework09Component, Input, Result, Button } from "./styles";
 function Homework09() {
   const [inputValue, setInputValue] = useState<string>("");
   const [inputValue2, setInputValue2] = useState<string>("");
-  const [result1, setResult1] = useState<string>("");
-  const [result2, setResult2] = useState<string>("");
+  const [showResult, setShowResult] = useState<boolean>(false);
 
   const onChangeInput: (event: ChangeEvent<HTMLInputElement>) => void = (
     event
@@ -20,17 +19,20 @@ function Homework09() {
   };
 
   const onClickButton: () => void = () => {
-    setResult1(inputValue);
-    setResult2(inputValue2);
+    setShowResult(true);
   };
 
   return (
     <Homework09Component>
-      <Input name="text" placeholder="text" onChange={onChangeInput} />
-      <Input name="text2" placeholder="text2" onChange={onChangeInput2} />
+      <Input type="text" name="text" placeholder="text" onChange={onChangeInput} />
+      <Input type="text" name="text2" placeholder="text2" onChange={onChangeInput2} />
       <Button onClick={onClickButton}>Result</Button>
-      <Result>{result1}</Result>
-      <Result>{result2}</Result>
+      {showResult ? (
+        <>
+          <Result>{inputValue}</Result>
+          <Result>{inputValue2}</Result>
+        </>
+      ) : null}
     </Homework09Component>
   );
 }
