@@ -1,13 +1,7 @@
 import { InputComponent, InputComponentContainer, InputLabel } from "./styles";
 import { InputProps } from "./types";
 
-function Input({
-  name,
-  type = "text",
-  placeholder,
-  label,
-  onInputChange,
-}: InputProps) {
+function Input({ name, type = "text", placeholder, label, onInputChange }: InputProps) {
   return (
     <InputComponentContainer>
       <InputLabel>{label}</InputLabel>
