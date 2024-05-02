@@ -1,14 +1,7 @@
-import { InputComponent, InputComponentContainer, InputLabel } from "./styles";
+import { ErrorMessage, InputComponent, InputComponentContainer, InputLabel } from "./styles";
 import { InputProps } from "./types";
 
-function Input({
-  name,
-  type = "text",
-  placeholder,
-  label,
-  onInputChange,
-  value,
-}: InputProps) {
+function Input({ name, type = "text", placeholder, label, onInputChange, value, error }: InputProps) {
   return (
     <InputComponentContainer>
       <InputLabel>{label}</InputLabel>
@@ -19,6 +12,7 @@ function Input({
         onChange={onInputChange}
         value={value}
       />
+      <ErrorMessage>{error}</ErrorMessage>
     </InputComponentContainer>
   );
 }
