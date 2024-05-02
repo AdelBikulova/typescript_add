@@ -9,17 +9,17 @@ export const EmployeeFormComponent = styled.form`
   padding: 60px;
   border: 1px solid black;
   border-radius: 4px;
-  background-color: white;
-`
+  background-color: #ead7fd;
+`;
 export const Checkbox = styled.input`
   width: 25px;
   height: 25px;
-`
+`;
 export const CheckboxLabel = styled.label`
- font-size: 20px; 
-`
+  font-size: 20px;
+`;
 export const CheckboxContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  `
+`;

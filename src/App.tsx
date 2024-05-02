@@ -1,5 +1,5 @@
-import GlobalStyles from 'styles/GlobalStyles';
-import Layout from 'components/Layout/Layout';
+import GlobalStyles from "styles/GlobalStyles";
+import Layout from "components/Layout/Layout";
 
 // Lessons
 // import Lesson06 from 'lessons/Lesson06/Lesson06';
@@ -10,16 +10,15 @@ import Layout from 'components/Layout/Layout';
 // import Lesson11 from 'lessons/Lesson11/Lesson11';
 // import Lesson12 from 'lessons/Lesson12/Lesson12';
 
-
 // Homeworks
 // import Homework07 from 'homeworks/Homework07/Homework07'
 // import Homework08 from 'homeworks/Homework08/Homework08';
 // import Homework09 from 'homeworks/Homework09/Homework09';
 // import Homework11 from 'homeworks/Homework11/Homework11';
+import Homework12 from "homeworks/Homework12/Homework12";
 
 // Consultations
 // import Consultation04 from 'consultations/Consultation04/Consultation04';
-
 
 function App() {
   return (
@@ -38,6 +37,7 @@ function App() {
       {/* <Lesson11 /> */}
       {/* <Homework11 /> */}
       {/* <Lesson12 /> */}
+      <Homework12 />
     </>
   );
 }
