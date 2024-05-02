@@ -12,7 +12,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   border-radius: 4px;
   padding: 20px;
   /* background-color: #1f27f5; */
-  background: ${({ disabled }) => (disabled ? "grey" : "#1f27f5")};
+  background: ${({ disabled }) => (disabled ? "grey" : "#3e42ab")};
   color: white;
   font-size: 16px;
   cursor: pointer;

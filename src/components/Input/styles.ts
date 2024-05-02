@@ -5,12 +5,13 @@ export const InputComponentContainer = styled.div`
   flex-direction: column;
   gap: 4px;
   width: 100%;
-  height: fit-content;`
+  height: fit-content;
+`;
 
 export const InputLabel = styled.label`
   font-size: 16px;
   color: #6f6f6f;
-`
+`;
 
 export const InputComponent = styled.input`
   width: 100%;
@@ -24,10 +25,10 @@ export const InputComponent = styled.input`
   &::placeholder {
     color: #6f6f6f;
   }
-`
+`;
 
 export const ErrorMessage = styled.p`
   color: red;
   font-size: 16px;
   height: 18px;
-`
+`;
