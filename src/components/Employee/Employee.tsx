@@ -1,17 +1,10 @@
-import { useState } from "react";
-import { useFormik } from "formik";
+import { useState } from 'react';
+import { useFormik } from 'formik';
 import Input from "components/Input/Input";
-import {
-  CardFormComponent,
-  Checkbox,
-  CheckboxContainer,
-  CheckboxLabel,
-  EmployeeFormComponent,
-  FormWrapper,
-  P,
-} from "./styles";
-import { EmployeeFormValues } from "./types";
-import Button from "components/Button/Button";
+import { CardFormComponent, Checkbox, CheckboxContainer, CheckboxLabel, EmployeeFormComponent, ErrorAgreementMessage, FormWrapper, P } from "./styles";
+import { EmployeeFormValues, EMPLOYEE_FIELD_NAMES } from './types';
+import Button from 'components/Button/Button';
+import * as Yup from 'yup'
 
 function EmployeeForm() {
   const [formValues, setFormValues] = useState<EmployeeFormValues>({
@@ -19,69 +12,93 @@ function EmployeeForm() {
     surname: "",
     age: "",
     position: "",
-    agreement: false,
+    agreement: false
   });
+
+  const validationSchema = Yup.object().shape({
+    [EMPLOYEE_FIELD_NAMES.NAME]: Yup.string()
+      .required('Required field')
+      .min(2, 'Min 2 symbols')
+      .max(50, 'Max 50 symbols'),
+    [EMPLOYEE_FIELD_NAMES.SURNAME]: Yup.string()
+      .required('Required field')
+      .min(3, 'Min 3 symbols')
+      .max(15, 'Max 15 symbols'),
+    [EMPLOYEE_FIELD_NAMES.AGE]: Yup.number()
+      .typeError('Age must be number')
+      .required('Required field')
+      // .max(999, 'Max 3 symbols'),
+      .test('check length', 'Max 3 symbols', value => String(value).length <= 3),
+    [EMPLOYEE_FIELD_NAMES.POSITION]: Yup.string(),
+    [EMPLOYEE_FIELD_NAMES.AGREEMENT]: Yup.boolean().oneOf([true], 'Accept agreement')
+  })
 
   const formik = useFormik({
     initialValues: {
-      name: "",
-      surname: "",
-      age: "",
-      position: "",
-      agreement: false,
+      [EMPLOYEE_FIELD_NAMES.NAME]: '',
+      [EMPLOYEE_FIELD_NAMES.SURNAME]: '',
+      [EMPLOYEE_FIELD_NAMES.AGE]: '',
+      [EMPLOYEE_FIELD_NAMES.POSITION]: '',
+      [EMPLOYEE_FIELD_NAMES.AGREEMENT]: false
     } as EmployeeFormValues,
+    validationSchema,
+    validateOnChange: false,
     onSubmit: (values: EmployeeFormValues) => {
       formik.setValues(values);
       setFormValues(values);
     },
   });
 
+  console.log(formik);
+
   return (
     <FormWrapper>
       <EmployeeFormComponent onSubmit={formik.handleSubmit}>
         <Input
-          name="name"
+          name={EMPLOYEE_FIELD_NAMES.NAME}
           placeholder="Enter your name"
-          label="Name"
+          label="Name*"
           onInputChange={formik.handleChange}
-          value={formik.values.name}
+          value={formik.values[EMPLOYEE_FIELD_NAMES.NAME]}
+          error={formik.errors[EMPLOYEE_FIELD_NAMES.NAME]}
         />
         <Input
-          name="surname"
+          name={EMPLOYEE_FIELD_NAMES.SURNAME}
           placeholder="Enter your surname"
-          label="Surname"
+          label="Surname*"
           onInputChange={formik.handleChange}
-          value={formik.values.surname}
+          value={formik.values[EMPLOYEE_FIELD_NAMES.SURNAME]}
+          error={formik.errors[EMPLOYEE_FIELD_NAMES.SURNAME]}
         />
         <Input
-          name="age"
+          name={EMPLOYEE_FIELD_NAMES.AGE}
           placeholder="Enter your age"
-          label="Age"
+          label="Age*"
           onInputChange={formik.handleChange}
-          value={formik.values.age}
+          value={formik.values[EMPLOYEE_FIELD_NAMES.AGE]}
+          error={formik.errors[EMPLOYEE_FIELD_NAMES.AGE]}
         />
         <Input
-          name="position"
+          name={EMPLOYEE_FIELD_NAMES.POSITION}
           placeholder="Enter your position"
           label="Position"
           onInputChange={formik.handleChange}
-          value={formik.values.position}
+          value={formik.values[EMPLOYEE_FIELD_NAMES.POSITION]}
+          error={formik.errors[EMPLOYEE_FIELD_NAMES.POSITION]}
         />
         <CheckboxContainer>
           <Checkbox
-            id="agreement-id"
-            name="agreement"
-            type="checkbox"
+            id='agreement-id'
+            name={EMPLOYEE_FIELD_NAMES.AGREEMENT}
+            type='checkbox'
             onChange={formik.handleChange}
-            checked={formik.values.agreement}
+            checked={formik.values[EMPLOYEE_FIELD_NAMES.AGREEMENT]}
           />
-          <CheckboxLabel htmlFor="agreement-id">I Agree</CheckboxLabel>
+          <CheckboxLabel htmlFor='agreement-id'>I Agree</CheckboxLabel>
         </CheckboxContainer>
-        <Button
-          type="submit"
-          name="Create"
-          disabled={!formik.values.agreement}
-        />
+        <ErrorAgreementMessage>{formik.errors[EMPLOYEE_FIELD_NAMES.AGREEMENT]}</ErrorAgreementMessage>
+        <Button type="submit" name="Create" disabled={!formik.values.agreement} />
+        {/* <Button type="submit" name="Create" /> */}
       </EmployeeFormComponent>
       <CardFormComponent>
         <P>Name: {formValues.name}</P>
@@ -89,8 +106,8 @@ function EmployeeForm() {
         <P>Age: {formValues.age}</P>
         <P>Position: {formValues.position}</P>
       </CardFormComponent>
-    </FormWrapper>
-  );
+    </FormWrapper>)
+
 }
 
 export default EmployeeForm;
