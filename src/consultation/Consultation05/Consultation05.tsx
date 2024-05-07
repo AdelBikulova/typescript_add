@@ -1,4 +1,4 @@
-import EmployeeForm from "components/Employee/Employee";
+import EmployeeForm from "components/EmployeeForm/EmployeeForm";
 import { Consultation05Wrapper } from "./styles";
 
 function Consultation05() {

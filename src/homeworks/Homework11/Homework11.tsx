@@ -1,4 +1,4 @@
-import EmployeeForm from "components/Employee/Employee";
+import EmployeeForm from "components/EmployeeForm/EmployeeForm";
 import { Homework11Wrapper } from "./styles";
 
 function Homework11() {
