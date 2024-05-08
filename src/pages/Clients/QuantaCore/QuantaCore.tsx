@@ -14,7 +14,7 @@ function QuantaCore() {
 
   return (
     <QuantaCoreWrapper>
-      <QuantaCoreTitle>QuantaCore page</QuantaCoreTitle>
+      <QuantaCoreTitle>QuantaCore</QuantaCoreTitle>
       <Button name="Go back" onButtonClick={() => navigate(-1)} />
     </QuantaCoreWrapper>
   );

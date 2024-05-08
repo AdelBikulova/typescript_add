@@ -11,4 +11,4 @@ export const Homework12Component = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-`;
+`

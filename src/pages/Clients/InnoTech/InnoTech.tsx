@@ -14,7 +14,7 @@ function InnoTech() {
 
   return (
     <InnoTechWrapper>
-      <InnoTechTitle>InnoTech page</InnoTechTitle>
+      <InnoTechTitle>InnoTech</InnoTechTitle>
       <Button name="Go back" onButtonClick={() => navigate(-1)} />
     </InnoTechWrapper>
   );

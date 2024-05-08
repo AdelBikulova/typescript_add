@@ -13,7 +13,7 @@ export const Header = styled.header`
   align-items: center;
   width: 100%;
   padding: 20px;
-  background: #06006F;
+  background: #09373f;
   color: white;
 `
 export const HeaderLogoContainer = styled.div`
@@ -46,6 +46,6 @@ export const Footer = styled.footer`
   align-items: center;
   width: 100%;
   padding: 20px;
-  background: #06006F;
+  background: #065766;
   color: white;
 `

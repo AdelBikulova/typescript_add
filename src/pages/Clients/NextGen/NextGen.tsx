@@ -14,7 +14,7 @@ function NextGen() {
 
   return (
     <NextGenWrapper>
-      <NextGenTitle>NextGen page</NextGenTitle>
+      <NextGenTitle>NextGen</NextGenTitle>
       <Button name="Go back" onButtonClick={() => navigate(-1)} />
     </NextGenWrapper>
   );

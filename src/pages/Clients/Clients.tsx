@@ -1,14 +1,14 @@
-import { Link} from 'react-router-dom';
+import { StyledLink, Title } from './styles';
 
 function Clients() {
-    return (
-      <div>
-        <h1>Clients</h1>
-        <Link to="/clients/innotech">InnoTech</Link>
-        <Link to="/clients/nextgen">NextGen</Link>
-        <Link to="/clients/quantaCore">QuantaCore</Link>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Title>Clients</Title>
+      <StyledLink to="/clients/innotech">InnoTech</StyledLink>
+      <StyledLink to="/clients/nextgen">NextGen</StyledLink>
+      <StyledLink to="/clients/quantaCore">QuantaCore</StyledLink>
+    </div>
+  )
+}
 
 export default Clients;
