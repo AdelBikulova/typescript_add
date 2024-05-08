@@ -1,28 +1,59 @@
-import { Footer, Header, HeaderLogo, HeaderLogoContainer, LayoutComponent, Main, NavContainer, StyledNavLink } from "./styles"
-import { LayoutProps } from "./types"
+import {
+  Footer,
+  Header,
+  HeaderLogo,
+  HeaderLogoContainer,
+  LayoutComponent,
+  Main,
+  NavContainer,
+  StyledNavLink,
+} from "./styles";
+import { LayoutProps } from "./types";
+import { useNavigate, Link } from "react-router-dom";
 
 function Layout({ children }: LayoutProps) {
+  const navigate = useNavigate();
+
   return (
     <LayoutComponent>
       <Header>
-        <HeaderLogoContainer>
-          <HeaderLogo />
-        </HeaderLogoContainer>
+        <Link to="/">
+          <HeaderLogoContainer onClick={() => navigate("/")}>
+            <HeaderLogo />
+          </HeaderLogoContainer>
+        </Link>
         <NavContainer>
           <StyledNavLink
-            to='/'
-            style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
+            to="/"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
             Home
           </StyledNavLink>
           <StyledNavLink
-            to='/about'
-            style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
+            to="/about"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
             About
           </StyledNavLink>
           <StyledNavLink
-            to='/users'
-            style={({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })}>
+            to="/users"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
             Users
+          </StyledNavLink>
+          <StyledNavLink
+            to="/clients"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Clients
           </StyledNavLink>
         </NavContainer>
       </Header>
@@ -33,7 +64,7 @@ function Layout({ children }: LayoutProps) {
         </HeaderLogoContainer>
       </Footer>
     </LayoutComponent>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
