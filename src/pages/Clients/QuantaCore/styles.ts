@@ -15,6 +15,6 @@ export const QuantaCoreWrapper = styled.div`
 
 export const QuantaCoreTitle = styled.h1`
   font-size: 42px;
-  color: #c7f21a;
+  color: #97ddea;
 `
 

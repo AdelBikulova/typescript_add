@@ -6,12 +6,12 @@ export const StyledLink = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px 0;
+  margin: 20px 0;
   gap: 100px;
   font-size: 40px;
   text-align: center;
   text-decoration: none;
-  color: blue;
+  color: #178295;
 `
 export const Title = styled.h1`
   text-align: center;
