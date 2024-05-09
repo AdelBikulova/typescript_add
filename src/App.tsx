@@ -1,14 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import GlobalStyles from 'styles/GlobalStyles';
-import Layout from 'components/Layout/Layout';
-import About from 'pages/About/About';
-import Home from 'pages/Home/Home';
-import Users from 'pages/Users/Users';
-import Clients from 'pages/Clients/Clients';
-import InnoTech from 'pages/Clients/InnoTech/InnoTech';
-import NextGen from 'pages/Clients/NextGen/NextGen';
-import QuantaCore from 'pages/Clients/QuantaCore/QuantaCore';
+import GlobalStyles from "styles/GlobalStyles";
+import Layout from "components/Layout/Layout";
+import About from "pages/About/About";
+import Home from "pages/Home/Home";
+import Users from "pages/Users/Users";
+import Clients from "pages/Clients/Clients";
+import InnoTech from "pages/Clients/InnoTech/InnoTech";
+import NextGen from "pages/Clients/NextGen/NextGen";
+import QuantaCore from "pages/Clients/QuantaCore/QuantaCore";
 
 // Lessons
 // import Lesson06 from 'lessons/Lesson06/Lesson06';
@@ -18,7 +18,6 @@ import QuantaCore from 'pages/Clients/QuantaCore/QuantaCore';
 // import Lesson10 from 'lessons/Lesson10/Lesson10';
 // import Lesson11 from 'lessons/Lesson11/Lesson11';
 // import Lesson12 from 'lessons/Lesson12/Lesson12';
-
 
 // Homeworks
 // import Homework07 from 'homeworks/Homework07/Homework07'
@@ -30,21 +29,20 @@ import QuantaCore from 'pages/Clients/QuantaCore/QuantaCore';
 // import Consultation04 from 'consultations/Consultation04/Consultation04';
 // import Consultation05 from 'consultations/Consultation05/Consultation05';
 
-
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
       <Layout>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/users' element={<Users />} />
-          <Route path='/clients' element={<Clients />} />
-          <Route path='/clients/innotech' element={<InnoTech />} />
-          <Route path='/clients/nextgen' element={<NextGen />} />
-          <Route path='/clients/quantaCore' element={<QuantaCore />} />
-          <Route path='*' element='Page Not Found'/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/innotech" element={<InnoTech />} />
+          <Route path="/clients/nextgen" element={<NextGen />} />
+          <Route path="/clients/quantaCore" element={<QuantaCore />} />
+          <Route path="*" element="Page Not Found" />
         </Routes>
       </Layout>
       {/* <Lesson06 /> */}

@@ -3,14 +3,17 @@ import styled from "@emotion/styled";
 export const HomeComponent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   padding: 10px;
-  /* background-image: url("https://cdn.pixabay.com/video/2023/10/01/183107-870151708_large.mp4"); */
-  gap: 20px;    
-  flex: 1; 
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-blend-mode: multiply; 
-  `
-  
+`
+export const HomePageVideo = styled.video`
+  width: 1200px;
+  height: auto;
+  object-fit: cover;
+`
+export const HomeTitle = styled.h1`
+  text-align: center;
+  font-size: 82px;
+  color: #faf7f3;
+  margin: 30px;
+`

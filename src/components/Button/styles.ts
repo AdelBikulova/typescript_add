@@ -9,7 +9,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   height: 100px;
   outline: none;
   border: none;
-  margin-top: 600px;
+  margin: 100px;
   border-radius: 4px;
   padding: 10px;
   /* background-color: #1f27f5; */
@@ -17,4 +17,4 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   color: #d9e0e6;
   font-size: 26px;
   cursor: pointer;
-`;
+`
