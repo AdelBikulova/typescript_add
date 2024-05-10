@@ -1,16 +1,9 @@
 import Button from "components/Button/Button";
 import { InnoTechWrapper, InnoTechTitle, StyledP } from "./styles";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 function InnoTech() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    return () => {
-      console.log("Component InnoTech unmounted");
-    };
-  }, []);
 
   return (
     <InnoTechWrapper>

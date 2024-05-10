@@ -1,18 +1,11 @@
 import Button from "components/Button/Button";
 import { NextGenWrapper, NextGenTitle, StyledP } from "./styles";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 function NextGen() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    return () => {
-      console.log("Component NextGen unmounted");
-    };
-  }, []);
-
-  return (
+   return (
     <NextGenWrapper>
       <NextGenTitle>NextGen</NextGenTitle>
       <div>

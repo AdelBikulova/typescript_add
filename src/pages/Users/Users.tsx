@@ -1,16 +1,11 @@
-import Button from "components/Button/Button";
 import { UserWrapper, UserTitle, StyledP } from "./styles";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 function Users() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  console.log(location);
-
-  const goToHomePage = () => {
-    navigate("/");
-  };
+  // const navigate = useNavigate();
+  // const location = useLocation();
+  // console.log(location);
 
   useEffect(() => {
     return () => {
@@ -54,8 +49,7 @@ function Users() {
           educational courses and programs on technological innovations, AI, and
           genetic engineering for professionals and business users.
           <br />
-        </StyledP>
-        <Button name="Go to Home page" onButtonClick={goToHomePage} />
+        </StyledP>      
       </div>
     </UserWrapper>
   );

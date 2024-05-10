@@ -1,16 +1,9 @@
 import { AboutWrapper, AboutTitle, StyledP } from "./styles";
-import Button from "components/Button/Button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 function About() {
   const navigate = useNavigate();
-  const location = useLocation();
-  console.log(location);
-
-  const goToHomePage = () => {
-    navigate("/");
-  };
 
   useEffect(() => {
     return () => {
@@ -47,8 +40,7 @@ function About() {
           partnerships with them. Our goal is to help every client succeed by
           providing innovative and effective solutions. Join Technology Park and
           let's create a future where technology serves humanity!
-        </StyledP>
-        <Button name="Go to Home page" onButtonClick={goToHomePage} />
+        </StyledP>        
       </div>
     </AboutWrapper>
   );
