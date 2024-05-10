@@ -1,17 +1,15 @@
 import { UserWrapper, UserTitle, StyledP } from "./styles";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 function Users() {
   // const navigate = useNavigate();
   // const location = useLocation();
   // console.log(location);
 
-  useEffect(() => {
-    return () => {
-      console.log("Component users unmounted");
-    };
-  }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     console.log("Component users unmounted");
+  //   };
+  // }, []);
 
   return (
     <UserWrapper>
@@ -49,7 +47,7 @@ function Users() {
           educational courses and programs on technological innovations, AI, and
           genetic engineering for professionals and business users.
           <br />
-        </StyledP>      
+        </StyledP>
       </div>
     </UserWrapper>
   );

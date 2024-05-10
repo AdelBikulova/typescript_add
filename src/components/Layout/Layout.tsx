@@ -18,11 +18,11 @@ function Layout({ children }: LayoutProps) {
   return (
     <LayoutComponent>
       <Header>
-        <Link to="/">
+        {/* <Link to="/"> */}
           <HeaderLogoContainer onClick={() => navigate("/")}>
             <HeaderLogo />
           </HeaderLogoContainer>
-        </Link>
+        {/* </Link> */}
         <NavContainer>
           <StyledNavLink
             to="/"

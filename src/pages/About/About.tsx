@@ -1,16 +1,6 @@
 import { AboutWrapper, AboutTitle, StyledP } from "./styles";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 function About() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    return () => {
-      console.log("Component users unmounted");
-    };
-  }, []);
-
   return (
     <AboutWrapper>
       <AboutTitle>About Technology Park</AboutTitle>
@@ -40,7 +30,7 @@ function About() {
           partnerships with them. Our goal is to help every client succeed by
           providing innovative and effective solutions. Join Technology Park and
           let's create a future where technology serves humanity!
-        </StyledP>        
+        </StyledP>
       </div>
     </AboutWrapper>
   );
